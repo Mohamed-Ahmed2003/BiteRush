@@ -84,7 +84,7 @@ public class RouteController : ControllerBase
     ///   &amp;currentPolyline=_p~iF~ps|U_ulLnnqC_mqNvxq`@   (optional)
     /// </summary>
 
-    [HttpGet("update")]
+    [HttpGet]
     [Route("api/route/update")]
     public async Task<IActionResult> UpdateRoute(
         [FromQuery] double userLat,

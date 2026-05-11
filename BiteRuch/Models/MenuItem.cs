@@ -24,5 +24,15 @@ public class MenuItem
 
     public readonly Restaurant restaurant;
 
+    public MenuItem(Guid id, string? name, double price, string? imageUrl, bool? isAvaiable, Guid restaurantId)
+    {
+        Id = id;
+        Name = name;
+        Price = price;
+        ImageUrl = imageUrl;
+        IsAvaiable = isAvaiable;
+        RestaurantId = restaurantId;
+    }
+
 
 }

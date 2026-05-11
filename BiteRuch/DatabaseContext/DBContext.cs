@@ -1,4 +1,5 @@
 ﻿using BiteRush.Models;
+using BiteRush.Seeds;
 using Microsoft.EntityFrameworkCore;
 
 namespace BiteRush.DatabaseContext;
@@ -25,6 +26,10 @@ public class DBContext : DbContext
             .HasForeignKey(m => m.RestaurantId);
 
         modelBuilder.Entity<MenuItem>();
+
+        RestaurantSeeder.Seed(modelBuilder);
+        MenuItemSeeder.Seed(modelBuilder);
+
     }
 
 }

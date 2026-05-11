@@ -4,6 +4,7 @@ using BiteRush.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BiteRuch.Migrations
 {
     [DbContext(typeof(DBContext))]
-    partial class DBContextModelSnapshot : ModelSnapshot
+    [Migration("20260511180915_SeedRestaurantsAndMenuItems")]
+    partial class SeedRestaurantsAndMenuItems
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,48 +56,21 @@ namespace BiteRuch.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("22222222-2222-2222-2222-222222222222"),
+                            Id = new Guid("33333333-3333-3333-3333-333333333333"),
                             ImageUrl = "/images/menuitems/koshary.jpg",
                             IsAvaiable = true,
                             Name = "Koshary",
                             Price = 40.0,
-                            RestaurantId = new Guid("11111111-1111-1111-1111-111111111112")
+                            RestaurantId = new Guid("11111111-1111-1111-1111-111111111111")
                         },
                         new
                         {
-                            Id = new Guid("22222222-2222-2222-2222-222222222224"),
-                            ImageUrl = "/images/menuitems/falafel.jpg",
-                            IsAvaiable = true,
-                            Name = "Falafel",
-                            Price = 30.0,
-                            RestaurantId = new Guid("11111111-1111-1111-1111-111111111113")
-                        },
-                        new
-                        {
-                            Id = new Guid("22222222-2222-2222-2222-222222222223"),
+                            Id = new Guid("44444444-4444-4444-4444-444444444444"),
                             ImageUrl = "/images/menuitems/grilledchicken.jpg",
                             IsAvaiable = true,
                             Name = "Grilled Chicken",
                             Price = 120.0,
-                            RestaurantId = new Guid("11111111-1111-1111-1111-111111111114")
-                        },
-                        new
-                        {
-                            Id = new Guid("22222222-2222-2222-2222-222222222225"),
-                            ImageUrl = "/images/menuitems/molokhia.jpg",
-                            IsAvaiable = true,
-                            Name = "Molokhia",
-                            Price = 50.0,
-                            RestaurantId = new Guid("11111111-1111-1111-1111-111111111111")
-                        },
-                        new
-                        {
-                            Id = new Guid("22222222-2222-2222-2222-222222222226"),
-                            ImageUrl = "/images/menuitems/kebab.jpg",
-                            IsAvaiable = true,
-                            Name = "Kebab",
-                            Price = 60.0,
-                            RestaurantId = new Guid("11111111-1111-1111-1111-111111111111")
+                            RestaurantId = new Guid("22222222-2222-2222-2222-222222222222")
                         });
                 });
 
@@ -141,32 +117,12 @@ namespace BiteRuch.Migrations
                         },
                         new
                         {
-                            Id = new Guid("11111111-1111-1111-1111-111111111114"),
+                            Id = new Guid("22222222-2222-2222-2222-222222222222"),
                             Description = "Classic Nile-side grill",
                             ImageUrl = "/images/restaurants/nilegrill.jpg",
                             Latitude = 30.050000000000001,
                             Longitude = 31.2333,
                             Name = "Nile Grill",
-                            Rating = 4.2000000000000002
-                        },
-                        new
-                        {
-                            Id = new Guid("11111111-1111-1111-1111-111111111112"),
-                            Description = "Famous Egyptian street food spot serving authentic koshary.",
-                            ImageUrl = "/images/restaurants/koshary.jpg",
-                            Latitude = 30.0444,
-                            Longitude = 31.235700000000001,
-                            Name = "Koshary El Tahrir",
-                            Rating = 4.5
-                        },
-                        new
-                        {
-                            Id = new Guid("11111111-1111-1111-1111-111111111113"),
-                            Description = "Trendy Egyptian restaurant offering modern takes on local dishes.",
-                            ImageUrl = "/images/restaurants/zooba.jpg",
-                            Latitude = 30.045000000000002,
-                            Longitude = 31.236000000000001,
-                            Name = "Zooba",
                             Rating = 4.2000000000000002
                         });
                 });
